@@ -1,0 +1,52 @@
+
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuantifyLOL - استثمر ونام</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #0f0;
+      font-family: monospace;
+      text-align: center;
+      padding: 20px;
+    }
+    .balance {
+      font-size: 2em;
+      margin: 20px 0;
+      color: #ff0;
+    }
+    .fake-transactions {
+      border: 1px solid #0f0;
+      padding: 10px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 500px;
+      background-color: #222;
+    }
+    .alert {
+      margin-top: 30px;
+      font-size: 1.2em;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>QuantifyLOL</h1>
+  <p>أرباحك اليومية مضمونة 1000%* (نجوم الكذب)</p>
+  <div class="balance" id="balance">$0.00</div>
+  <button onclick="generateFakeMoney()">اضغط هنا لتبدأ توليد الثروة</button>  <div class="fake-transactions" id="transactions">
+    <h3>آخر السحوبات:</h3>
+    <ul id="tx-list">
+      <li>شريف الضحية - $9999</li>
+      <li>أبو سحب سريع - $7200</li>
+      <li>ضحكة مستمرة - $6666</li>
+    </ul>
+  </div>  <div class="alert">
+    تنبيه: هذا الموقع ساخر لتوعية الناس من منصات النصب!<br>
+    لا تصدق أي موقع يطلب منك "استثمر وارتاح"!
+  </div>  <script>
+    let balance = 0;
+    function generateFakeMoney() {
+      balance += Math.random() *
