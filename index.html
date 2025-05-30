@@ -1,72 +1,74 @@
 
-<!DOCTYPE html>
-<html lang="ar">
+<!DOCTYPE html><html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>منصة وهمية للضحك</title>
+  <title>المنصة الوهمية 😂</title>
   <style>
-    body { font-family: sans-serif; text-align: center; margin: 0; background: #f0f0f0; }
-    header { background: #ffe600; padding: 20px; font-size: 22px; font-weight: bold; }
-    main { padding: 20px; }
-    .nav { position: fixed; bottom: 0; width: 100%; display: flex; background: #222; color: white; }
-    .nav button { flex: 1; padding: 15px; background: none; border: none; color: white; font-size: 16px; cursor: pointer; }
-    .nav button:hover { background: #444; }
-    section { display: none; }
-    section.active { display: block; }
-    .task, .level, .invite, .profile { padding: 10px; background: white; margin: 10px auto; max-width: 400px; border-radius: 8px; box-shadow: 0 0 10px #ccc; }
+    body { margin: 0; font-family: sans-serif; background: #f9f9f9; }
+    header { background: #ffe600; padding: 15px; text-align: center; font-weight: bold; font-size: 24px; }
+    main { padding-bottom: 80px; }
+    .section { display: none; text-align: center; }
+    .section.active { display: block; }
+    .nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      background: #222;
+      border-top: 2px solid #ccc;
+    }
+    .nav button {
+      flex: 1;
+      padding: 15px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .nav button:hover {
+      background: #444;
+    }
+    img.page-img {
+      width: 100%;
+      max-width: 480px;
+      display: block;
+      margin: 0 auto;
+    }
   </style>
 </head>
 <body>
-  <header>منصة استثمار وهمية 😂</header>
+  <header>💸 المنصة الوهمية الساخرة 💸</header>
   <main>
-    <section id="home" class="active">
-      <h2>مرحبًا بك في عالم الأرباح اليومية الوهمية!</h2>
-      <div class="task">تحميل التطبيق المزيف</div>
-      <div class="task">ملف الشركة (PDF وهمي)</div>
-      <div class="task">شاهد إعلان الذكاء الاصطناعي المزعوم</div>
-      <div class="task">المهام اليومية</div>
-    </section>
-
-    <section id="tasks">
-      <h2>مهامك اليومية</h2>
-      <div class="task">ابدأ عمل اليوم - أرباح 0.5$</div>
-      <div class="task">العائد اليومي: 5%</div>
-      <div class="task">رصيدك الوهمي: 10$</div>
-    </section>
-
-    <section id="vip">
-      <h2>مستويات VIP</h2>
-      <div class="level">VIP1 - سعر: 10$ - دخل: 0.5$/يوم</div>
-      <div class="level">VIP2 - سعر: 50$ - دخل: 3$/يوم</div>
-      <div class="level">VIP3 - سعر: 100$ - دخل: 7$/يوم</div>
-    </section>
-
-    <section id="invite">
-      <h2>دعوة الأصدقاء</h2>
-      <div class="invite">انسخ رابط الدعوة: fakeapp.com/invite/123ABC</div>
-    </section>
-
-    <section id="profile">
-      <h2>حسابك</h2>
-      <div class="profile">رصيدك: 10$ وهمي</div>
-      <div class="profile">زر الإيداع</div>
-      <div class="profile">زر السحب (TRC20 / BEP20)</div>
-    </section>
+    <div id="home" class="section active">
+      <img class="page-img" src="https://i.postimg.cc/RFjcWS22/Picsart-25-05-29-22-51-51-756.jpg" alt="تسجيل الدخول">
+    </div>
+    <div id="tasks" class="section">
+      <img class="page-img" src="https://i.postimg.cc/QMz7zNNV/Picsart-25-05-29-22-56-54-174.jpg" alt="المهام + VIP">
+    </div>
+    <div id="vip" class="section">
+      <img class="page-img" src="https://i.postimg.cc/QMz7zNNV/Picsart-25-05-29-22-56-54-174.jpg" alt="المستويات VIP">
+    </div>
+    <div id="invite" class="section">
+      <img class="page-img" src="https://i.postimg.cc/xjMmsSwT/Picsart-25-05-29-22-57-27-227.jpg" alt="دعوة الأصدقاء">
+    </div>
+    <div id="profile" class="section">
+      <img class="page-img" src="https://i.postimg.cc/8ztMhBqR/Picsart-25-05-29-22-53-40-598.jpg" alt="أنا والسحب">
+    </div>
   </main>
-
   <div class="nav">
     <button onclick="showTab( home )">الرئيسية</button>
     <button onclick="showTab( tasks )">المهام</button>
     <button onclick="showTab( vip )">كبار الشخصيات</button>
-    <button onclick="showTab( invite )">دعوة</button>
+    <button onclick="showTab( invite )">دعوة الأصدقاء</button>
     <button onclick="showTab( profile )">أنا</button>
   </div>
-
   <script>
-    function showTab(id) {
-      document.querySelectorAll( section ).forEach(sec => sec.classList.remove( active ));
-      document.getElementById(id).classList.add( active );
+    function showTab(tabId) {
+      document.querySelectorAll( .section ).forEach(el => el.classList.remove( active ));
+      document.getElementById(tabId).classList.add( active );
     }
   </script>
 </body>
